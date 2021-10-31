@@ -21,9 +21,9 @@ function imc() {
         } else if (valorIMC < 35) {
             classification = 'with grade I obesity.';
         } else if (valorIMC < 40) {
-            classification = 'com obesidade grau II';
+            classification = 'with grade II obesity';
         } else {
-            classification = 'com obesidade grau III. Caution!!';
+            classification = 'with grade III obesity. Caution!!';
         }
 
         result.textContent = `${name} your BMI is ${valorIMC} and you are ${classification}`;
