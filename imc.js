@@ -10,26 +10,26 @@ function imc() {
 
         const valorIMC = (weight / (height * height)).toFixed(1);
 
-        let classificacao = '';
+        let classification = '';
 
         if (valorIMC < 18.5) {
-            classificacao = 'abaixo do peso.';
+            classification = 'under weight.';
         } else if (valorIMC < 25) {
-            classificacao = 'com peso ideal. Parabéns!!!';
+            classification = 'with ideal weight. Congratulations!!!';
         } else if (valorIMC < 30) {
-            classificacao = 'levemente acima do peso.';
+            classification = 'slightly overweight.';
         } else if (valorIMC < 35) {
-            classificacao = 'com obesidade grau I.';
+            classification = 'with grade I obesity.';
         } else if (valorIMC < 40) {
-            classificacao = 'com obesidade grau II';
+            classification = 'com obesidade grau II';
         } else {
-            classificacao = 'com obesidade grau III. Cuidado!!';
+            classification = 'com obesidade grau III. Caution!!';
         }
 
-        result.textContent = `${name} seu IMC é ${valorIMC} e você está ${classificacao}`;
+        result.textContent = `${name} your BMI is ${valorIMC} and you are ${classification}`;
 
     } else {
-        result.textContent = 'Preencha todos os campos!!!';
+        result.textContent = 'Fill in all fields!!!';
     }
 
 }
