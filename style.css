@@ -3,11 +3,16 @@
     padding: 0;
 }
 
+body {
+    animation: changeColors 7s infinite;
+}
+
 :root {
-    --color-primary: red;
-    --color-secundary: blue;
-    --color-background: black;
-    --color-background-secondary: purple;
+    --color-primary: #79CDCD;
+    --color-secundary: #97FFFF;
+    --color-background: #7AC5CD;
+    --color-background-secondary: #8EE5EE;
+    --color-shadow: black;
 }
 
 main {
@@ -27,7 +32,8 @@ main {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 25px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px var(--color-shadow);
+    border: 2px solid var(--color-shadow);
 }
 
 .title {
@@ -37,8 +43,9 @@ main {
     width: 100%;
     height: 50px;
     font: bold 2.5rem serif;
-    border-bottom: solid 5px black;
+    border-bottom: solid 2px var(--color-shadow);
     margin-bottom: 20px;
+    padding: 20px 0;
 }
 
 .input {
@@ -51,12 +58,13 @@ main {
 
 .input input {
     width: 200px;
-    height: 50px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     outline: 0;
     font: bold 1.5rem serif;
     text-align: center;
+    border: 1px solid var(--color-shadow);
 }
 
 .input label {
@@ -65,27 +73,45 @@ main {
 
 button {
     width: 300px;
-    height: 40px;
+    height: 47px;
     font: bold 1.2rem serif;
-    background: #000;
-    color: rgb(255, 198, 0);
+    background: var(--color-secundary);
+    color: var(--color-shadow);
     outline: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid var(--color-shadow);
+}
+
+#calculate {
+    margin: 20px 0;
 }
 
 .result {
     display: flex;
-    margin-top: 20px;
     align-items: center;
     width: 300px;
     height: 150px;
     border-radius: 5px;
     font: italic 1.5rem serif;
-    box-shadow: 0px 0px 10px black;
-    background: #000;
-    color: rgb(255, 198, 0);
+    box-shadow: 0px 0px 10px var(--color-shadow);
+    background: var(--color-secundary);
+    color: var(--color-shadow);
     padding: 20px;
     box-sizing: border-box;
     user-select: none;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-shadow);
+}
+
+@keyframes changeColors {
+    0% {
+        background-color: var(--color-primary);
+    }
+    50% {
+        background-color: var(--color-secundary);
+    }
+    100% {
+        background-color: var(--color-background);
+    }
 }
